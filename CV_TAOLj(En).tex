@@ -1,0 +1,221 @@
+\documentclass[paper=a4]{article}
+\usepackage{fullpage}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+
+\usepackage[usenames]{color}
+\usepackage{bold-extra}
+\usepackage{hyperref}
+
+\usepackage{bbding} %Specail symbols package
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.8in
+\textheight=10.9in
+
+\raggedright
+
+%\pagenumbering{arabic}
+\thispagestyle{empty}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+% DEFINITIONS FOR RESUME
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\bfseries{\scshape{#1}}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{OT1}{phv}{b}{n}\center\textsc{#1}	% Name
+		\par \normalsize \normalfont}
+
+\newenvironment{body} {
+	\vspace*{-16pt}
+	\begin{changemargin}{-0.5in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\MyName{Tao Lj}
+\vspace{14pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal Data
+\header{\large{Personal Data}}
+
+\begin{body}
+	\vspace{14pt}
+	\Plane \,\,XXXX, XXXX, XXXX, China \hfill \Phone {\,\,(+XX) XXX-XXXX-XXXX} \\
+	Birth:  XXXX, XXXX, China  \& MONTH DAY, YEAR \hfill\Envelope {\,\,XXXXXXXXX@XXXX.com}
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{\large{Education}}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Master of Computer Science --- GPA X.XX/4.00}{} \hfill \emph{Sep 2010 - present}{} \\
+	\emph{XXXX University, XX, China} \\
+  \medskip
+	\textbf{Bachelor of Computer Science --- GPA X.XX/4.00} \hfill \emph{Sep 2006 - Jul 2010} \\
+	\emph{XXXX University, XX, China}\\
+\end{body}
+
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experiences
+\header{\large{Experience}}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Software Developer}, \emph{XXXX Company} \hfill \emph{Dec 2011- Jul 2012}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item[\HandRight] ABOUT YOUR WOEK
+	\end{itemize}
+
+	\textbf {Research Team Member}, \emph{XXXX Laboratory,XXX} \hfill \emph{Sep 2011 - present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+	         \item[\HandRight] ABOUT YOUR WOEK
+		\item[\HandRight] ABOUT YOUR WOEK
+	\end{itemize}
+	
+	\textbf{Software Developer}, \emph{XXXX Company} \hfill \emph{Sep 2010- Jun 2011}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item[\HandRight] ABOUT YOUR WOEK
+	\end{itemize}
+	
+	\textbf{Open Source Programmer}, \emph{Individual Coding4Fun} \hfill \emph{Mar 2012 - present}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item[\HandRight] GAE-weblog Template Project (GAE: \url{http://ljtaoblog.appspot.com/})
+		\item[\HandRight] Django-weblog Project (GitHub: \url{https://github.com/MarsFreewill/django-weblog})
+		\item[\HandRight] \LaTeX  \ Template Project
+		\item[\HandRight] Point Cloud Library with Kinect Project
+		\item[\HandRight] IOS Development for iPad/iPhone
+	\end{itemize}
+
+	\textbf{Exchange Student}, \emph{Inha University,Korea} \hfill \emph{Jul 2009- Sep 2011}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item[\HandRight] Summer School Program of Inha University
+	\end{itemize}
+	
+\end{body}
+
+\smallskip
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership Activities
+\header{\large{Leadership Activities}}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Leader} of Graduate Student Union in Computer Science Department  \hfill {} \emph{Sep 2010 - Sep 2011}\\
+	\smallskip
+	\textbf{Office Leader} of XXXX  \hfill {} \emph{Sep 2010 - Sep 2011}\\
+	\smallskip
+	\textbf{Team Leader} Hosted ``XXXX" \hfill {} \emph{Oct 2011}\\
+	\smallskip
+	\textbf{Teaching Assistant} of Undergraduate students in XXXX \hfill{} \emph{Feb 2011 - Jul 2011}\\
+	\textbf{Secretary} of Undergraduate Student Union  in Computer Science Department \hfill {} \emph{Sep 2006 - Jul 2010}\\
+	\smallskip
+\end{body}
+\smallskip
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and scholarships
+\header{\large{Awards And Honors}}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{Outstanding Communist Youth League member of XXXX} \hfill{} \emph{2011}\\
+	\smallskip
+	\textbf{Second Class Graduate Scholarship} (Top XX\% in XXXX) \hfill{} \emph{2011}\\
+	\smallskip
+	\textbf{XXXX Prize} \hfill{} \emph{2011}\\
+	\smallskip
+	\textbf{Excellent Young Volunteer of XXXX} \hfill{} \emph{2011}\\
+	\smallskip
+	\textbf{Excellent student of XXXXy} \hfill{} \emph{2010,2009,2007}\\
+	\smallskip
+	\textbf{First Class Scholarship} (Top XX\% in XXXX) \hfill{} \emph{2010}\\
+	\smallskip
+	\textbf{Outstanding student leaders of XXXX} \hfill{} \emph{2009}\\
+	\smallskip
+	\textbf{Model Communist Party Member in XXXX} \hfill{} \emph{2008 - 2010}\\
+	\smallskip
+	\textbf{Second Class Scholarship} (Top XX\% in XXXX) \hfill{} \emph{2009,2008,2007}\\
+	\smallskip
+\end{body}
+
+\smallskip
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{\large{Skills And Language}}
+\begin{body}
+	\vspace{15pt}
+	{\textbf{Language Skill:}}
+		\begin{changemargin}{1.4in}{-0.05in}\vspace{-12pt}
+		Chinese(mother tongue), English(fluent), Japanese(beginner), Korean(beginner)
+	\end{changemargin}
+	\smallskip
+	{\textbf{Programming:}}\vspace{5pt}
+	\begin{changemargin}{1.9in}{-0.05in}\vspace{-14pt}
+		\begin{itemize} \itemsep -0pt  % reduce space between items
+	  		\item[\FiveStar \FiveStar \FiveStar \FiveStar \FiveStar] {C, C++, Python, Matlab, Data Structures and Algorithms, Processing, \LaTeX}
+			\item[\FiveStar \FiveStar \FiveStar \FiveStar \FiveStarOpen] {C\#, Objective-C, Django, JavaScript, HTML/CSS, XML}
+			\item[\FiveStar \FiveStar \FiveStar \FiveStarOpen \FiveStarOpen] { Java, SQL, Oracle, Lisp, OpenCV, Machine Learning}
+		\end{itemize}
+	\end{changemargin}
+	\smallskip
+	\smallskip
+	{\textbf{Operating System:}}
+	\begin{changemargin}{1.4in}{-0.05in}\vspace{-13pt}
+		Windows, Mac OS X, Linux
+	\end{changemargin}
+
+\end{body}
+
+\end{document}

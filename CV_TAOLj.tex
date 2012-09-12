@@ -1,0 +1,210 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[paper=a4]{article}
+\usepackage{fullpage}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{hyperref}
+\usepackage{bbding} %Specail symbols package
+
+\leftmargin=0.25in
+\oddsidemargin=0.25in
+\textwidth=6.0in
+\topmargin=-0.9in
+\textheight=10.9in
+
+\raggedright
+
+%\pagenumbering{arabic}
+\thispagestyle{empty}
+
+\newenvironment{changemargin}[2]{%
+  \begin{list}{}{%
+    \setlength{\topsep}{0pt}%
+    \setlength{\leftmargin}{#1}%
+    \setlength{\rightmargin}{#2}%
+    \setlength{\listparindent}{\parindent}%
+    \setlength{\itemindent}{\parindent}%
+    \setlength{\parsep}{\parskip}%
+  }%
+  \item[]}{\end{list}
+}
+
+\newcommand{\lineover}{
+	\begin{changemargin}{-0.05in}{-0.05in}
+		\vspace*{-8pt}
+		\hrulefill \\
+		\vspace*{-2pt}
+	\end{changemargin}
+}
+
+\newcommand{\header}[1]{
+	\begin{changemargin}{-0.5in}{-0.5in}
+		\usefont{EU1}{STXinwei(0)}{m}{n}{#1}\\
+  	\lineover
+	\end{changemargin}
+}
+
+\newcommand{\MyName}[1]{
+		\Huge \usefont{EU1}{STXingkai(0)}{m}{n}\center \textsc{#1}	% Name
+		\par \normalsize \normalfont}
+
+\newenvironment{body} {
+	\vspace*{-15pt}
+	\begin{changemargin}{-0.5in}{-0.5in}
+  }	
+	{\end{changemargin}
+}	
+
+
+% END RESUME DEFINITIONS
+
+\usepackage{fontspec,xltxtra,xunicode}
+\defaultfontfeatures{Mapping=tex-text}
+\XeTeXlinebreaklocale “zh”
+\XeTeXlinebreakskip = 0pt plus 1pt minus 0.1pt %文章内中文自动换行
+
+%设置中文字体
+\newfontfamily{\S}{STSong}
+\newfontfamily{\H}{STKaiti}
+\newfontfamily{\X}{STXingkai}
+\newfontfamily{\XW}{STXinwei}
+\newfontfamily{\ZS}{STZhongsong}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Name
+\MyName{姓\,\,名}
+%\MySlogan{}
+\vspace{6pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Personal Data
+\begin{changemargin}{-0.5in}{-0.5in}
+{\XW \Plane \,\,中国xx省xx市xx路xx号, 邮编号码}\hfill {\XW \Phone \,\,(+86) xxx-xxxx-xxxx} \hfill {\XW \Envelope\,\,xxxxxxxx@gmail.com}
+\end{changemargin}
+\smallskip
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Education
+\header{\large{教育经历}}
+\begin{body}
+	\vspace{14pt}
+	\textbf{\ZS 工学硕士} -- {\S xxxx专业, GPA: x.xx/4.00             {\ \ \ \ \ \ \ \ \ \ }xx大学}{} \hfill \emph{2010/09 - {\S 今}}{} \\
+  \medskip
+	\textbf{\ZS 工学学士} -- {\S xxxx专业, GPA: x.xx/4.00        {\ \ \ \ \ \ \ \ \ \ }xx大学} \hfill \emph{2006/09 - 2010/07} \\
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Experiences
+\header{\large{项目经历}}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{\ZS 软件开发}, {\S xxxx公司} \hfill \emph{2011/12- 2012/07}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item[\HandRight] {\S xxxx项目}
+	\end{itemize}
+	
+	\textbf {\ZS 学术研究}, {\S xxxx实验室} \hfill \emph{2011/09 - {\S 今}}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt
+	         \item[\HandRight] {\S xxxx项目1}
+		\item[\HandRight] {\S xxxx项目2}
+	\end{itemize}
+	
+	\textbf{\ZS 软件开发}, {\S xxxx研究所} \hfill \emph{2010/09- 2011/06}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item[\HandRight]  {\S xxxx项目}
+	\end{itemize}
+
+	\textbf{\ZS xxxx开发}, {\S xxxx公司} \hfill \emph{2012/03 - {\S 今}}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item[\HandRight] {\S 基于GAE的个人网站} (GAE: \url{http://ljtaoblog.appspot.com/})
+		\item[\HandRight] {\S 基于Django的个人博客系统} (GitHub: \url{https://github.com/MarsFreewill/django-weblog})
+		\item[\HandRight] {\LaTeX \S{开源模板}} (GitHub: \url{https://github.com/MarsFreewill/CV_TeX-En-})
+		\item[\HandRight] {\S 基于PCL点云库的Kinect项目}
+		\item[\HandRight] {\S iPad/iPhone上的IOS开发}
+	\end{itemize}
+
+	\textbf{\ZS 交换生}, {\S xxxx大学} \hfill \emph{2009/7- 2009/09}\\
+	\vspace*{-4pt}
+	\begin{itemize} \itemsep -0pt  % reduce space between items
+		\item[\HandRight]  {\S xxxx项目}
+	\end{itemize}
+	
+\end{body}
+
+% \newpage{} % uncomment this line if you want to force a new page
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Leadership Activities
+\header{\large{校园活动}}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{\ZS 学生干部}
+	\begin{itemize}\itemsep -0pt  % reduce space between items
+		\item[\NibRight]\textbf{\S 头衔1}  \hfill {} \emph{2010/09 - 2011/09}\\
+		\item[\NibRight]\textbf{\S 头衔2}  \hfill {} \emph{2010/09 - 2011/09}\\
+		\item[\NibRight]\textbf{\S 头衔3}  \hfill {} \emph{2010/09 - 2011/02}\\
+		\item[\NibRight]\textbf{\S 头衔4} \hfill {} \emph{2006/09 - 2010/07}\\
+	\end{itemize}
+	\textbf{\ZS 学生活动}
+	\begin{itemize}\itemsep -0pt  % reduce space between items
+		\item[\PencilRight]\textbf{\H 学生助教}  {\S 担任本科生xxxx课程助教} \hfill {} \emph{2011/02 - 2011/07}\\
+		\item[\PencilRight]\textbf{\H 团队负责人}  {\S 策划并承办“xxxx”活动} \hfill {} \emph{2011/10}\\
+		\item[\PencilRight]\textbf{\H 团队负责人}  {\S 策划并承办“xxxx”活动} \hfill\emph{2009/05}\\
+	\end{itemize}
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Awards and scholarships
+\header{\large{奖项和荣誉}}
+
+\begin{body}
+	\vspace{14pt}
+	\textbf{\S 奖项1} \hfill{} \emph{2011}\\
+	\smallskip
+	\textbf{\S 奖项2} \hfill{} \emph{2011}\\
+	\smallskip
+	\textbf{\S 奖项3} \hfill{} \emph{2011}\\
+	\smallskip
+	\textbf{\S 奖项4} \hfill{} \emph{2011}\\
+	\smallskip
+	\textbf{\S 荣誉称号1} \hfill{} \emph{2010,2009,2007}\\
+	\smallskip
+	\textbf{\S 荣誉称号2} \hfill{} \emph{2010}\\
+	\smallskip
+	\textbf{\S 荣誉称号3} \hfill{} \emph{2009}\\
+	\smallskip
+	\textbf{\S 荣誉称号4} \hfill{} \emph{2008 - 2010}\\
+	\smallskip
+\end{body}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Skills
+\header{\large{个人技能}}
+
+\begin{body}
+	\vspace{14pt}
+	{\textbf{\S 语言能力：}}\vspace{-11pt}
+	\begin{changemargin}{0.7in}{-0.05in}
+		{\S 中文(\,母语\,) , 英语(\,流利\,), ＊语(\,入门\,), ＊语(\,入门\,)}\\
+	\end{changemargin}
+	{\textbf{\S 编程能力：}}\vspace{-11pt}
+	\begin{changemargin}{1.2in}{-0.05in}
+		\begin{itemize} \itemsep -0pt  % reduce space between items
+	  		\item[\FiveStar \FiveStar \FiveStar \FiveStar \FiveStar] {C, C++, Python, Matlab, Data Structures and Algorithms, Processing, \LaTeX}
+			\item[\FiveStar \FiveStar \FiveStar \FiveStar \FiveStarOpen] {C\#, .NET, Objective-C, Django, JavaScript, HTML/CSS, XML}
+			\item[\FiveStar \FiveStar \FiveStar \FiveStarOpen \FiveStarOpen] { Java, PHP, SQL, Oracle, Lisp, OpenCV, Machine Learning}
+		\end{itemize}
+	\end{changemargin}
+	{\textbf{\S 操作系统：}}\vspace{-11pt}
+	\begin{changemargin}{0.7in}{-0.05in}
+		Windows, Mac OS X, Linux
+	\end{changemargin}
+\end{body}
+\end{document}
+
